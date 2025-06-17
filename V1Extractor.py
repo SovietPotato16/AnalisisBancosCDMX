@@ -819,7 +819,7 @@ class MultiBankCDMXMapper:
         print(f"Mapa comparativo por alcaldías guardado como: {archivo}")
         return mapa
 
-# Ejemplo de uso completo
+# Ejecucion del pipeline
 if __name__ == "__main__":
     # PASO 1: Configurar API key de Google Maps
     API_KEY = "TU_API_KEY_AQUI"
