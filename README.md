@@ -1,5 +1,8 @@
 # 🏦 Mapeador Multi-Bancos CDMX
 
+## 🌐 **Demo Interactiva**
+**Explora los resultados en tiempo real:** [https://bankdata.streamlit.app/](https://bankdata.streamlit.app/)
+
 Extractor y analizador de sucursales bancarias en la Ciudad de México que permite comparar **Santander**, **BBVA** y **Banorte** con análisis de competencia, visualización de reseñas y mapas interactivos.
 
 ## ✨ Nuevas Funcionalidades
