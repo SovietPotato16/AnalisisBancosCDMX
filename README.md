@@ -23,12 +23,18 @@ Extractor y analizador de sucursales bancarias en la Ciudad de México que permi
 
 ## 🚀 Instalación
 
-### 1. Instalar dependencias
+### 1. Configurar entorno virtual (Recomendado)
+```bash
+python3 -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
+```
+
+### 2. Instalar dependencias
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Configurar API Key de Google Maps
+### 3. Configurar API Key de Google Maps
 1. Ve a [Google Cloud Console](https://console.cloud.google.com/)
 2. Crea un proyecto y habilita las APIs:
    - Places API
@@ -38,6 +44,40 @@ pip install -r requirements.txt
 ```python
 API_KEY = "TU_API_KEY_AQUI"
 ```
+
+## 📊 Nuevo: Dashboard Interactivo con Streamlit
+
+### 🎯 **Análisis Avanzado de Reseñas y Competencia**
+Hemos agregado una **aplicación web interactiva** que permite analizar los datos extraídos con visualizaciones avanzadas, análisis de sentimientos y mapas interactivos.
+
+### 🚀 **Ejecución Rápida**
+```bash
+# Opción 1: Script automático (Recomendado)
+python run_analyzer.py
+
+# Opción 2: Manual
+streamlit run streamlit_analyzer.py
+```
+
+### ✨ **Características del Dashboard**
+- **📊 Resumen General**: Métricas principales y distribuciones por banco
+- **💬 Análisis de Reseñas**: Análisis de sentimientos, wordclouds y tendencias
+- **🎯 Análisis de Competencia**: Distancias, saturación del mercado y ventajas competitivas
+- **🗺️ Mapas Interactivos**: Visualización geoespacial con filtros dinámicos
+- **📈 Insights Avanzados**: Correlaciones, análisis predictivo y recomendaciones
+
+### 🎨 **Funcionalidades Principales**
+1. **Análisis de Sentimientos**: Clasificación automática de reseñas (positivas/negativas/neutrales)
+2. **Mapas de Calor**: Visualización de densidad y calidad por zona
+3. **Análisis de Competencia**: Identificación de zonas saturadas y oportunidades
+4. **Correlaciones**: Relaciones entre variables clave (rating, reseñas, competencia)
+5. **Recomendaciones**: Insights automáticos para estrategias de expansión
+
+### 📱 **Interfaz Interactiva**
+- **Filtros dinámicos**: Por banco, alcaldía, rating, etc.
+- **Visualizaciones responsivas**: Gráficos que se adaptan a los filtros
+- **Exportación de reportes**: Descarga de análisis en formato JSON
+- **Tema atractivo**: Diseño moderno con gradientes y colores corporativos
 
 ## 🎮 Uso
 

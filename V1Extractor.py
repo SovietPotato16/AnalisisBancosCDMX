@@ -822,7 +822,7 @@ class MultiBankCDMXMapper:
 # Ejecucion del pipeline
 if __name__ == "__main__":
     # PASO 1: Configurar API key de Google Maps
-    API_KEY = "TU_API_KEY_AQUI"
+    API_KEY = ""
     
     # PASO 2: Crear instancia del mapeador multi-bancos
     mapper = MultiBankCDMXMapper(API_KEY)
@@ -830,16 +830,16 @@ if __name__ == "__main__":
     # PASO 3: Buscar sucursales de múltiples bancos (elige una estrategia)
     
     # Opción A: Solo Santander (original)
-    mapper.buscar_todas_sucursales_cdmx(
-        estrategia='alcaldias',
-        bancos=['Santander']
-    )
+    #mapper.buscar_todas_sucursales_cdmx(
+    #    estrategia='alcaldias',
+    #    bancos=['Santander']
+    #)
     
     # Opción B: Todos los bancos por alcaldías (recomendado)
-    # mapper.buscar_todas_sucursales_cdmx(
-    #     estrategia='alcaldias',
-    #     bancos=['Santander', 'BBVA', 'Banorte']
-    # )
+    mapper.buscar_todas_sucursales_cdmx(
+        estrategia='alcaldias',
+        bancos=['Santander', 'BBVA', 'Banorte']
+    )
     
     # Opción C: Por cuadrícula (más exhaustivo)
     # mapper.buscar_todas_sucursales_cdmx(

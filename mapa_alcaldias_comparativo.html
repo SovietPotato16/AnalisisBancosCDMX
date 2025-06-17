@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_db2b7614fb4fb210441509503cdebd5f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_db2b7614fb4fb210441509503cdebd5f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_db2b7614fb4fb210441509503cdebd5f = L.map(
+                "map_db2b7614fb4fb210441509503cdebd5f",
+                {
+                    center: [19.4326, -99.1332],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_84d38fdb2005fb7257920600bf7c0ccd = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_84d38fdb2005fb7257920600bf7c0ccd.addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var circle_cb9f9ca38c7ccdf4494c18f457c7da97 = L.circle(
+                [19.478072731999998, -99.174984216],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3750, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_e60eaa82b9bf9b19e74e5499c333194d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6108901ce4675cd7a28ec0689f4118ba = $(`<div id="html_6108901ce4675cd7a28ec0689f4118ba" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Azcapotzalco</h3>                 <p><b>Total de sucursales bancarias:</b> 25</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>6</td>                         <td>2.43</td>                         <td>479</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>12</td>                         <td>3.05</td>                         <td>647</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>7</td>                         <td>2.64</td>                         <td>274</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_e60eaa82b9bf9b19e74e5499c333194d.setContent(html_6108901ce4675cd7a28ec0689f4118ba);
+            
+        
+
+        circle_cb9f9ca38c7ccdf4494c18f457c7da97.bindPopup(popup_e60eaa82b9bf9b19e74e5499c333194d)
+        ;
+
+        
+    
+    
+            var marker_aa372c2568bd6e521be5f0bfff5d0da6 = L.marker(
+                [19.478072731999998, -99.174984216],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_8818a3f65867a1c74c8a2a3007031d70 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eAzcapotzalco\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_ebf04e01fbf97aaf7dd6bc787c987aff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07712b7b09582d12bbcf0b083962a51c = $(`<div id="html_07712b7b09582d12bbcf0b083962a51c" style="width: 100.0%; height: 100.0%;">Azcapotzalco</div>`)[0];
+                popup_ebf04e01fbf97aaf7dd6bc787c987aff.setContent(html_07712b7b09582d12bbcf0b083962a51c);
+            
+        
+
+        marker_aa372c2568bd6e521be5f0bfff5d0da6.bindPopup(popup_ebf04e01fbf97aaf7dd6bc787c987aff)
+        ;
+
+        
+    
+    
+                marker_aa372c2568bd6e521be5f0bfff5d0da6.setIcon(div_icon_8818a3f65867a1c74c8a2a3007031d70);
+            
+    
+            var circle_c07ef44961cc308defc96ab77cf6fdc7 = L.circle(
+                [19.384490225, -99.15803885749999],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12000, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_f6cbf7b454fcf01510a558eb2f5ce39f = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_87217d8a3e98bebd605e323ea90721db = $(`<div id="html_87217d8a3e98bebd605e323ea90721db" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Benito Juárez</h3>                 <p><b>Total de sucursales bancarias:</b> 80</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>31</td>                         <td>2.00</td>                         <td>2380</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>28</td>                         <td>2.81</td>                         <td>1632</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>21</td>                         <td>2.94</td>                         <td>615</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_f6cbf7b454fcf01510a558eb2f5ce39f.setContent(html_87217d8a3e98bebd605e323ea90721db);
+            
+        
+
+        circle_c07ef44961cc308defc96ab77cf6fdc7.bindPopup(popup_f6cbf7b454fcf01510a558eb2f5ce39f)
+        ;
+
+        
+    
+    
+            var marker_02bcf97b5545d66769f3d4135c51bcf7 = L.marker(
+                [19.384490225, -99.15803885749999],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_6e2268e442358a38356de164a6ee69fd = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eBenito Ju\u00e1rez\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_a1f059800d2f0c9b9f63e426972aefb7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d27bfe4851492da91aaada72adeee2cb = $(`<div id="html_d27bfe4851492da91aaada72adeee2cb" style="width: 100.0%; height: 100.0%;">Benito Juárez</div>`)[0];
+                popup_a1f059800d2f0c9b9f63e426972aefb7.setContent(html_d27bfe4851492da91aaada72adeee2cb);
+            
+        
+
+        marker_02bcf97b5545d66769f3d4135c51bcf7.bindPopup(popup_a1f059800d2f0c9b9f63e426972aefb7)
+        ;
+
+        
+    
+    
+                marker_02bcf97b5545d66769f3d4135c51bcf7.setIcon(div_icon_6e2268e442358a38356de164a6ee69fd);
+            
+    
+            var circle_ae767a927a8d0c5080a6eb0c06dc801f = L.circle(
+                [19.329589217948715, -99.15408036153846],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5850, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_cfaaef5209739d3d62c0b343edb1fbef = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_2626173ba887c7cc4f4d1bfd80c46e3a = $(`<div id="html_2626173ba887c7cc4f4d1bfd80c46e3a" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Coyoacán</h3>                 <p><b>Total de sucursales bancarias:</b> 39</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>11</td>                         <td>1.98</td>                         <td>902</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>14</td>                         <td>2.89</td>                         <td>1264</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>14</td>                         <td>2.86</td>                         <td>278</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_cfaaef5209739d3d62c0b343edb1fbef.setContent(html_2626173ba887c7cc4f4d1bfd80c46e3a);
+            
+        
+
+        circle_ae767a927a8d0c5080a6eb0c06dc801f.bindPopup(popup_cfaaef5209739d3d62c0b343edb1fbef)
+        ;
+
+        
+    
+    
+            var marker_f4c6b4a8591ceb39db7e3d5a93aec991 = L.marker(
+                [19.329589217948715, -99.15408036153846],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_27c69ff90994376445a698a7ed67ed8a = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eCoyoac\u00e1n\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_54d1537348489102430dd496ba7a1aaa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c5ab90773868f00a8eb8fd5193ccdf9d = $(`<div id="html_c5ab90773868f00a8eb8fd5193ccdf9d" style="width: 100.0%; height: 100.0%;">Coyoacán</div>`)[0];
+                popup_54d1537348489102430dd496ba7a1aaa.setContent(html_c5ab90773868f00a8eb8fd5193ccdf9d);
+            
+        
+
+        marker_f4c6b4a8591ceb39db7e3d5a93aec991.bindPopup(popup_54d1537348489102430dd496ba7a1aaa)
+        ;
+
+        
+    
+    
+                marker_f4c6b4a8591ceb39db7e3d5a93aec991.setIcon(div_icon_27c69ff90994376445a698a7ed67ed8a);
+            
+    
+            var circle_f353e875e92b97ad52184b36d5814236 = L.circle(
+                [19.368194308695653, -99.27208521304348],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3450, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_7a3270113cf358f735ef102481d1b207 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_54d6b609aa14f4829ba5b4bd56b1a2d3 = $(`<div id="html_54d6b609aa14f4829ba5b4bd56b1a2d3" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Cuajimalpa</h3>                 <p><b>Total de sucursales bancarias:</b> 23</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>9</td>                         <td>2.08</td>                         <td>257</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>6</td>                         <td>2.17</td>                         <td>183</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>8</td>                         <td>2.78</td>                         <td>156</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_7a3270113cf358f735ef102481d1b207.setContent(html_54d6b609aa14f4829ba5b4bd56b1a2d3);
+            
+        
+
+        circle_f353e875e92b97ad52184b36d5814236.bindPopup(popup_7a3270113cf358f735ef102481d1b207)
+        ;
+
+        
+    
+    
+            var marker_7872df7bb2832e70e3fa0bd349b4152b = L.marker(
+                [19.368194308695653, -99.27208521304348],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_5efd623966278e25567e46d1f8eb577e = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eCuajimalpa\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_ec2066b405c726e2b861255094ee303f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60a10cfffd3edd77a1c625c0e6740184 = $(`<div id="html_60a10cfffd3edd77a1c625c0e6740184" style="width: 100.0%; height: 100.0%;">Cuajimalpa</div>`)[0];
+                popup_ec2066b405c726e2b861255094ee303f.setContent(html_60a10cfffd3edd77a1c625c0e6740184);
+            
+        
+
+        marker_7872df7bb2832e70e3fa0bd349b4152b.bindPopup(popup_ec2066b405c726e2b861255094ee303f)
+        ;
+
+        
+    
+    
+                marker_7872df7bb2832e70e3fa0bd349b4152b.setIcon(div_icon_5efd623966278e25567e46d1f8eb577e);
+            
+    
+            var circle_053423c1ca10324b035dc2f73dc351d1 = L.circle(
+                [19.428969388888888, -99.15324463232324],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14850, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_f8a145dc3919e321c6436c071e420e97 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_42ef09e824aa4a58f38a742d0c73b7a2 = $(`<div id="html_42ef09e824aa4a58f38a742d0c73b7a2" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Cuauhtémoc</h3>                 <p><b>Total de sucursales bancarias:</b> 99</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>40</td>                         <td>2.21</td>                         <td>1755</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>28</td>                         <td>2.76</td>                         <td>2395</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>31</td>                         <td>2.45</td>                         <td>735</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_f8a145dc3919e321c6436c071e420e97.setContent(html_42ef09e824aa4a58f38a742d0c73b7a2);
+            
+        
+
+        circle_053423c1ca10324b035dc2f73dc351d1.bindPopup(popup_f8a145dc3919e321c6436c071e420e97)
+        ;
+
+        
+    
+    
+            var marker_97f629db238bdc07d4e0c95eba1025a4 = L.marker(
+                [19.428969388888888, -99.15324463232324],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_ea688726e02efdef6ec7103f51ad4858 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eCuauht\u00e9moc\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_1c79d11eeedd0622db1b028df1c54d6c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6c74803dfdb867bb3594bba5462eacd3 = $(`<div id="html_6c74803dfdb867bb3594bba5462eacd3" style="width: 100.0%; height: 100.0%;">Cuauhtémoc</div>`)[0];
+                popup_1c79d11eeedd0622db1b028df1c54d6c.setContent(html_6c74803dfdb867bb3594bba5462eacd3);
+            
+        
+
+        marker_97f629db238bdc07d4e0c95eba1025a4.bindPopup(popup_1c79d11eeedd0622db1b028df1c54d6c)
+        ;
+
+        
+    
+    
+                marker_97f629db238bdc07d4e0c95eba1025a4.setIcon(div_icon_ea688726e02efdef6ec7103f51ad4858);
+            
+    
+            var circle_983eb88dd47f17f19f93ff3a019c6e77 = L.circle(
+                [19.489694719512194, -99.12342767804878],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6150, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_9ed9ca6c4c74dc33cf06768a1d0dd2d8 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_1cd1966f75f6c4f774bc9e4c00598a94 = $(`<div id="html_1cd1966f75f6c4f774bc9e4c00598a94" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Gustavo A. Madero</h3>                 <p><b>Total de sucursales bancarias:</b> 41</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>10</td>                         <td>2.25</td>                         <td>859</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>18</td>                         <td>3.05</td>                         <td>1557</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>13</td>                         <td>2.62</td>                         <td>537</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_9ed9ca6c4c74dc33cf06768a1d0dd2d8.setContent(html_1cd1966f75f6c4f774bc9e4c00598a94);
+            
+        
+
+        circle_983eb88dd47f17f19f93ff3a019c6e77.bindPopup(popup_9ed9ca6c4c74dc33cf06768a1d0dd2d8)
+        ;
+
+        
+    
+    
+            var marker_019a760d4b38d6f43354129612a5aab5 = L.marker(
+                [19.489694719512194, -99.12342767804878],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_88a123c68911442e24e6e2c86a28db19 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eGustavo A. Madero\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_21b3511e2b7074eb279dcdb995a6e5bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f19f6b571552e989d6ce946074e06b56 = $(`<div id="html_f19f6b571552e989d6ce946074e06b56" style="width: 100.0%; height: 100.0%;">Gustavo A. Madero</div>`)[0];
+                popup_21b3511e2b7074eb279dcdb995a6e5bc.setContent(html_f19f6b571552e989d6ce946074e06b56);
+            
+        
+
+        marker_019a760d4b38d6f43354129612a5aab5.bindPopup(popup_21b3511e2b7074eb279dcdb995a6e5bc)
+        ;
+
+        
+    
+    
+                marker_019a760d4b38d6f43354129612a5aab5.setIcon(div_icon_88a123c68911442e24e6e2c86a28db19);
+            
+    
+            var circle_8108a4336be4bde85a1fd4a30cc2def3 = L.circle(
+                [19.392199315, -99.09737011],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_def15d7333d055707cee24153fd36b70 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5887b8c3b886def8fc41cc22006ce2ae = $(`<div id="html_5887b8c3b886def8fc41cc22006ce2ae" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Iztacalco</h3>                 <p><b>Total de sucursales bancarias:</b> 20</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>5</td>                         <td>1.98</td>                         <td>663</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>7</td>                         <td>2.89</td>                         <td>580</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>8</td>                         <td>2.98</td>                         <td>245</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_def15d7333d055707cee24153fd36b70.setContent(html_5887b8c3b886def8fc41cc22006ce2ae);
+            
+        
+
+        circle_8108a4336be4bde85a1fd4a30cc2def3.bindPopup(popup_def15d7333d055707cee24153fd36b70)
+        ;
+
+        
+    
+    
+            var marker_66d8a2f1a8d3ff612bea3e44070450a2 = L.marker(
+                [19.392199315, -99.09737011],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_fc1f1756edf8006af6ab6e43da1b1322 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eIztacalco\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_a16b18e5a30c173060ed4bc21c5e34a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d105bef0f98903416dd4d0e0e70b918e = $(`<div id="html_d105bef0f98903416dd4d0e0e70b918e" style="width: 100.0%; height: 100.0%;">Iztacalco</div>`)[0];
+                popup_a16b18e5a30c173060ed4bc21c5e34a1.setContent(html_d105bef0f98903416dd4d0e0e70b918e);
+            
+        
+
+        marker_66d8a2f1a8d3ff612bea3e44070450a2.bindPopup(popup_a16b18e5a30c173060ed4bc21c5e34a1)
+        ;
+
+        
+    
+    
+                marker_66d8a2f1a8d3ff612bea3e44070450a2.setIcon(div_icon_fc1f1756edf8006af6ab6e43da1b1322);
+            
+    
+            var circle_9adf3c66ed8aa2ef1659c817e7307d08 = L.circle(
+                [19.359599592452827, -99.08537209056604],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7950, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_c062f9ada05400270999f402cf04e643 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_53d06874ce1a0eb201d09e728241f679 = $(`<div id="html_53d06874ce1a0eb201d09e728241f679" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Iztapalapa</h3>                 <p><b>Total de sucursales bancarias:</b> 53</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>13</td>                         <td>2.15</td>                         <td>763</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>20</td>                         <td>2.62</td>                         <td>1932</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>20</td>                         <td>2.46</td>                         <td>468</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_c062f9ada05400270999f402cf04e643.setContent(html_53d06874ce1a0eb201d09e728241f679);
+            
+        
+
+        circle_9adf3c66ed8aa2ef1659c817e7307d08.bindPopup(popup_c062f9ada05400270999f402cf04e643)
+        ;
+
+        
+    
+    
+            var marker_ef7dca6a655a7b6430cbeee2cffbd9b8 = L.marker(
+                [19.359599592452827, -99.08537209056604],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_70140cbf33db0c9b90d25678b05886d9 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eIztapalapa\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_f2708d737595c1b7697832b92ae140d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd3e32fd37b4de96a9b1271582656d4c = $(`<div id="html_bd3e32fd37b4de96a9b1271582656d4c" style="width: 100.0%; height: 100.0%;">Iztapalapa</div>`)[0];
+                popup_f2708d737595c1b7697832b92ae140d7.setContent(html_bd3e32fd37b4de96a9b1271582656d4c);
+            
+        
+
+        marker_ef7dca6a655a7b6430cbeee2cffbd9b8.bindPopup(popup_f2708d737595c1b7697832b92ae140d7)
+        ;
+
+        
+    
+    
+                marker_ef7dca6a655a7b6430cbeee2cffbd9b8.setIcon(div_icon_70140cbf33db0c9b90d25678b05886d9);
+            
+    
+            var circle_fb4b9855a405f66ab44ae0b4dc6215e4 = L.circle(
+                [19.3248028, -99.22318151666667],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 900, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_78b2a909aeb679162152bb7f8907d7ad = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_bb71730f7d7d0f7894909e466068b27e = $(`<div id="html_bb71730f7d7d0f7894909e466068b27e" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Magdalena Contreras</h3>                 <p><b>Total de sucursales bancarias:</b> 6</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>2</td>                         <td>2.65</td>                         <td>49</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>2</td>                         <td>3.40</td>                         <td>97</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>2</td>                         <td>3.05</td>                         <td>49</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_78b2a909aeb679162152bb7f8907d7ad.setContent(html_bb71730f7d7d0f7894909e466068b27e);
+            
+        
+
+        circle_fb4b9855a405f66ab44ae0b4dc6215e4.bindPopup(popup_78b2a909aeb679162152bb7f8907d7ad)
+        ;
+
+        
+    
+    
+            var marker_1fec300238c54c4f32940f62ad604fae = L.marker(
+                [19.3248028, -99.22318151666667],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_d8f7e7591a62fafd128ef95cdb9c0d8f = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eMagdalena Contreras\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_6558b9eb0ab2ce8ee4056175202b0c5d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71b54edf5877b7ffc3630624925e7be2 = $(`<div id="html_71b54edf5877b7ffc3630624925e7be2" style="width: 100.0%; height: 100.0%;">Magdalena Contreras</div>`)[0];
+                popup_6558b9eb0ab2ce8ee4056175202b0c5d.setContent(html_71b54edf5877b7ffc3630624925e7be2);
+            
+        
+
+        marker_1fec300238c54c4f32940f62ad604fae.bindPopup(popup_6558b9eb0ab2ce8ee4056175202b0c5d)
+        ;
+
+        
+    
+    
+                marker_1fec300238c54c4f32940f62ad604fae.setIcon(div_icon_d8f7e7591a62fafd128ef95cdb9c0d8f);
+            
+    
+            var circle_c493ad65e31ffaaaca8d8e22c1e958bd = L.circle(
+                [19.4322395527027, -99.19632829864864],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11100, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_6187c202bbd84201e429915b3f1506ae = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_944560a3aaaed93f6e2f4c5a5e4d3e74 = $(`<div id="html_944560a3aaaed93f6e2f4c5a5e4d3e74" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Miguel Hidalgo</h3>                 <p><b>Total de sucursales bancarias:</b> 74</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>23</td>                         <td>2.03</td>                         <td>1054</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>23</td>                         <td>2.62</td>                         <td>1237</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>28</td>                         <td>2.35</td>                         <td>540</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_6187c202bbd84201e429915b3f1506ae.setContent(html_944560a3aaaed93f6e2f4c5a5e4d3e74);
+            
+        
+
+        circle_c493ad65e31ffaaaca8d8e22c1e958bd.bindPopup(popup_6187c202bbd84201e429915b3f1506ae)
+        ;
+
+        
+    
+    
+            var marker_a1f5c9f1814c7648fad0e06bd8d61469 = L.marker(
+                [19.4322395527027, -99.19632829864864],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_b87a12a09d6d72a04e7f75281d238a14 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eMiguel Hidalgo\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_01e406ab091075f75c44c505c8c360a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e7d93193fc6b82172339a63c724d472 = $(`<div id="html_9e7d93193fc6b82172339a63c724d472" style="width: 100.0%; height: 100.0%;">Miguel Hidalgo</div>`)[0];
+                popup_01e406ab091075f75c44c505c8c360a2.setContent(html_9e7d93193fc6b82172339a63c724d472);
+            
+        
+
+        marker_a1f5c9f1814c7648fad0e06bd8d61469.bindPopup(popup_01e406ab091075f75c44c505c8c360a2)
+        ;
+
+        
+    
+    
+                marker_a1f5c9f1814c7648fad0e06bd8d61469.setIcon(div_icon_b87a12a09d6d72a04e7f75281d238a14);
+            
+    
+            var circle_9538fcdd5b09478ba41c4a2dec63e74c = L.circle(
+                [19.1924918, -99.0239353],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 300, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_7a007ff0705a6b3219360675616de068 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_4771805d93d32e2664085e10ef14b0c3 = $(`<div id="html_4771805d93d32e2664085e10ef14b0c3" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Milpa Alta</h3>                 <p><b>Total de sucursales bancarias:</b> 2</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: gray;">                         <td>Santander</td>                         <td>0</td>                         <td>-</td>                         <td>0</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>1</td>                         <td>1.80</td>                         <td>80</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>1</td>                         <td>2.00</td>                         <td>5</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_7a007ff0705a6b3219360675616de068.setContent(html_4771805d93d32e2664085e10ef14b0c3);
+            
+        
+
+        circle_9538fcdd5b09478ba41c4a2dec63e74c.bindPopup(popup_7a007ff0705a6b3219360675616de068)
+        ;
+
+        
+    
+    
+            var marker_fe8fb860c2e2d5eabb015df57e3e9314 = L.marker(
+                [19.1924918, -99.0239353],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_27697f9951b1af612cc01c9e1a2ec5df = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eMilpa Alta\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_9b318b394251ac60df3305ddcc832d53 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_407b6b24c3a8bdea5428aaad672669f9 = $(`<div id="html_407b6b24c3a8bdea5428aaad672669f9" style="width: 100.0%; height: 100.0%;">Milpa Alta</div>`)[0];
+                popup_9b318b394251ac60df3305ddcc832d53.setContent(html_407b6b24c3a8bdea5428aaad672669f9);
+            
+        
+
+        marker_fe8fb860c2e2d5eabb015df57e3e9314.bindPopup(popup_9b318b394251ac60df3305ddcc832d53)
+        ;
+
+        
+    
+    
+                marker_fe8fb860c2e2d5eabb015df57e3e9314.setIcon(div_icon_27697f9951b1af612cc01c9e1a2ec5df);
+            
+    
+            var circle_e1d32031d344a817dd2c1421afe7ce23 = L.circle(
+                [19.297622321428573, -99.16022268214284],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4200, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_3dbba42800a84eace435682304631380 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_73079ab58f8779d50706bb27139113d4 = $(`<div id="html_73079ab58f8779d50706bb27139113d4" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Tlalpan</h3>                 <p><b>Total de sucursales bancarias:</b> 28</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>10</td>                         <td>1.89</td>                         <td>787</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>9</td>                         <td>2.66</td>                         <td>652</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>9</td>                         <td>3.29</td>                         <td>140</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_3dbba42800a84eace435682304631380.setContent(html_73079ab58f8779d50706bb27139113d4);
+            
+        
+
+        circle_e1d32031d344a817dd2c1421afe7ce23.bindPopup(popup_3dbba42800a84eace435682304631380)
+        ;
+
+        
+    
+    
+            var marker_e834d98016b6041aa7ff1ad4a12d722b = L.marker(
+                [19.297622321428573, -99.16022268214284],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_c8c591d612293b47a18ecddb094d816d = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eTlalpan\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_b22049950a88d2dba834bf60298b5d94 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_766f868f26cb1ba9b5a7c50f6625e7bc = $(`<div id="html_766f868f26cb1ba9b5a7c50f6625e7bc" style="width: 100.0%; height: 100.0%;">Tlalpan</div>`)[0];
+                popup_b22049950a88d2dba834bf60298b5d94.setContent(html_766f868f26cb1ba9b5a7c50f6625e7bc);
+            
+        
+
+        marker_e834d98016b6041aa7ff1ad4a12d722b.bindPopup(popup_b22049950a88d2dba834bf60298b5d94)
+        ;
+
+        
+    
+    
+                marker_e834d98016b6041aa7ff1ad4a12d722b.setIcon(div_icon_c8c591d612293b47a18ecddb094d816d);
+            
+    
+            var circle_beca60c52270a22b43d5c3078adaef78 = L.circle(
+                [19.280618399999998, -99.0198196],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 900, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_9bdd45302eb0d320b7653f8a53880610 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_49e769a333eb590eb57f4faf7e50fcb5 = $(`<div id="html_49e769a333eb590eb57f4faf7e50fcb5" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Tláhuac</h3>                 <p><b>Total de sucursales bancarias:</b> 6</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>1</td>                         <td>2.20</td>                         <td>154</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>3</td>                         <td>2.63</td>                         <td>259</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>2</td>                         <td>3.80</td>                         <td>85</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_9bdd45302eb0d320b7653f8a53880610.setContent(html_49e769a333eb590eb57f4faf7e50fcb5);
+            
+        
+
+        circle_beca60c52270a22b43d5c3078adaef78.bindPopup(popup_9bdd45302eb0d320b7653f8a53880610)
+        ;
+
+        
+    
+    
+            var marker_98c441d0eec8b4031d3350b1ab7a1bb7 = L.marker(
+                [19.280618399999998, -99.0198196],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_64b4471b8594c64171ce92aafa04fc52 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eTl\u00e1huac\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_ae21a2054998382b910870ddbe4a91fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b0a23a9cc673bf710200729cb46d273 = $(`<div id="html_8b0a23a9cc673bf710200729cb46d273" style="width: 100.0%; height: 100.0%;">Tláhuac</div>`)[0];
+                popup_ae21a2054998382b910870ddbe4a91fd.setContent(html_8b0a23a9cc673bf710200729cb46d273);
+            
+        
+
+        marker_98c441d0eec8b4031d3350b1ab7a1bb7.bindPopup(popup_ae21a2054998382b910870ddbe4a91fd)
+        ;
+
+        
+    
+    
+                marker_98c441d0eec8b4031d3350b1ab7a1bb7.setIcon(div_icon_64b4471b8594c64171ce92aafa04fc52);
+            
+    
+            var circle_19b098bf0cb8c0e64508c054403d8740 = L.circle(
+                [19.423964317857145, -99.10383715714285],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4200, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_85a0f641e2fdf50cd087c43162368cd8 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_8e44f80081232b11cd2a88c379537776 = $(`<div id="html_8e44f80081232b11cd2a88c379537776" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Venustiano Carranza</h3>                 <p><b>Total de sucursales bancarias:</b> 28</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>7</td>                         <td>2.21</td>                         <td>413</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>12</td>                         <td>2.72</td>                         <td>757</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>9</td>                         <td>2.16</td>                         <td>173</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_85a0f641e2fdf50cd087c43162368cd8.setContent(html_8e44f80081232b11cd2a88c379537776);
+            
+        
+
+        circle_19b098bf0cb8c0e64508c054403d8740.bindPopup(popup_85a0f641e2fdf50cd087c43162368cd8)
+        ;
+
+        
+    
+    
+            var marker_8a3ac4772834c12ddbe07f6fd0fd7513 = L.marker(
+                [19.423964317857145, -99.10383715714285],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_2313751bc5a25829aba4748da40520b4 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eVenustiano Carranza\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_8ea569adc1d80f47a4fddc3b6b935680 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0c57ea4f0825068ab4591d752744604 = $(`<div id="html_c0c57ea4f0825068ab4591d752744604" style="width: 100.0%; height: 100.0%;">Venustiano Carranza</div>`)[0];
+                popup_8ea569adc1d80f47a4fddc3b6b935680.setContent(html_c0c57ea4f0825068ab4591d752744604);
+            
+        
+
+        marker_8a3ac4772834c12ddbe07f6fd0fd7513.bindPopup(popup_8ea569adc1d80f47a4fddc3b6b935680)
+        ;
+
+        
+    
+    
+                marker_8a3ac4772834c12ddbe07f6fd0fd7513.setIcon(div_icon_2313751bc5a25829aba4748da40520b4);
+            
+    
+            var circle_9ad2d7467d6eb5c1b58c47fdf995ba93 = L.circle(
+                [19.2672993875, -99.11742201249999],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1200, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_fc24cd1ae3af47784be2706ffa2f49cb = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_3769b0b799d64d0cfe315ae82f1c2b29 = $(`<div id="html_3769b0b799d64d0cfe315ae82f1c2b29" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Xochimilco</h3>                 <p><b>Total de sucursales bancarias:</b> 8</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>2</td>                         <td>1.85</td>                         <td>151</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>4</td>                         <td>2.98</td>                         <td>287</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>2</td>                         <td>2.45</td>                         <td>64</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_fc24cd1ae3af47784be2706ffa2f49cb.setContent(html_3769b0b799d64d0cfe315ae82f1c2b29);
+            
+        
+
+        circle_9ad2d7467d6eb5c1b58c47fdf995ba93.bindPopup(popup_fc24cd1ae3af47784be2706ffa2f49cb)
+        ;
+
+        
+    
+    
+            var marker_cf29d14f0abd65faa7af62dfc79f7907 = L.marker(
+                [19.2672993875, -99.11742201249999],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_93b0eb7a4a97c15715f2803a56a8bbd3 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003eXochimilco\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_f55c512ef930fd825830bc2ac19c2b8a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3af952fe87cfc7969c133cc7b844d8e = $(`<div id="html_a3af952fe87cfc7969c133cc7b844d8e" style="width: 100.0%; height: 100.0%;">Xochimilco</div>`)[0];
+                popup_f55c512ef930fd825830bc2ac19c2b8a.setContent(html_a3af952fe87cfc7969c133cc7b844d8e);
+            
+        
+
+        marker_cf29d14f0abd65faa7af62dfc79f7907.bindPopup(popup_f55c512ef930fd825830bc2ac19c2b8a)
+        ;
+
+        
+    
+    
+                marker_cf29d14f0abd65faa7af62dfc79f7907.setIcon(div_icon_93b0eb7a4a97c15715f2803a56a8bbd3);
+            
+    
+            var circle_65278c586f6f8ed1811bfe5d0ed1db04 = L.circle(
+                [19.355144093220336, -99.20964563050846],
+                {"bubblingMouseEvents": true, "color": "navy", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "navy", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8850, "stroke": true, "weight": 2}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+        var popup_481759bc29fc1f9801c8efda78423915 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5cb67cfdc41f67be3dc49d4d60000167 = $(`<div id="html_5cb67cfdc41f67be3dc49d4d60000167" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 350px;">                 <h3>🏛️ Álvaro Obregón</h3>                 <p><b>Total de sucursales bancarias:</b> 59</p>                                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">                     <thead>                         <tr style="background-color: #f0f0f0;">                             <th style="padding: 5px; border: 1px solid #ddd;">Banco</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Sucursales</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Rating</th>                             <th style="padding: 5px; border: 1px solid #ddd;">Reseñas</th>                         </tr>                     </thead>                     <tbody>                                              <tr style="color: red;">                         <td><b>Santander</b></td>                         <td>21</td>                         <td>2.19</td>                         <td>1900</td>                     </tr>                                          <tr style="color: blue;">                         <td><b>BBVA</b></td>                         <td>24</td>                         <td>2.72</td>                         <td>1145</td>                     </tr>                                          <tr style="color: green;">                         <td><b>Banorte</b></td>                         <td>14</td>                         <td>2.63</td>                         <td>276</td>                     </tr>                                          </tbody>                 </table>             </div>             </div>`)[0];
+                popup_481759bc29fc1f9801c8efda78423915.setContent(html_5cb67cfdc41f67be3dc49d4d60000167);
+            
+        
+
+        circle_65278c586f6f8ed1811bfe5d0ed1db04.bindPopup(popup_481759bc29fc1f9801c8efda78423915)
+        ;
+
+        
+    
+    
+            var marker_472f9754efa5d5e4f1f60be8fd0a9418 = L.marker(
+                [19.355144093220336, -99.20964563050846],
+                {
+}
+            ).addTo(map_db2b7614fb4fb210441509503cdebd5f);
+        
+    
+            var div_icon_98678612036ac65984295f495a18a103 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12px; color: navy; font-weight: bold;\"\u003e\u00c1lvaro Obreg\u00f3n\u003c/div\u003e",
+  "iconSize": [100, 20],
+  "iconAnchor": [50, 10],
+  "className": "empty",
+});
+        
+    
+        var popup_b0ccd1f66df8c4dc87af5b6834f31e0a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be3c2ca6c116e24ef83c5b32c2645b82 = $(`<div id="html_be3c2ca6c116e24ef83c5b32c2645b82" style="width: 100.0%; height: 100.0%;">Álvaro Obregón</div>`)[0];
+                popup_b0ccd1f66df8c4dc87af5b6834f31e0a.setContent(html_be3c2ca6c116e24ef83c5b32c2645b82);
+            
+        
+
+        marker_472f9754efa5d5e4f1f60be8fd0a9418.bindPopup(popup_b0ccd1f66df8c4dc87af5b6834f31e0a)
+        ;
+
+        
+    
+    
+                marker_472f9754efa5d5e4f1f60be8fd0a9418.setIcon(div_icon_98678612036ac65984295f495a18a103);
+            
+</script>
+</html>
