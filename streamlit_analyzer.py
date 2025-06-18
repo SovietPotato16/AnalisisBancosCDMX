@@ -1232,47 +1232,6 @@ def show_executive_report(df, reviews_df, competencia_df, analyzer):
             for alcaldia, score in low_satisfaction.items():
                 st.write(f"• {alcaldia}: {score:.2f}")
     
-    # Proyección de ROI
-    st.subheader("💰 Proyección de ROI para Expansión")
-    
-    # Simular ROI basado en datos actuales
-    roi_projections = []
-    for banco in ['Santander', 'BBVA', 'Banorte']:
-        banco_data = df[df['banco'] == banco]
-        if not banco_data.empty:
-            avg_reviews = banco_data['total_reviews'].mean()
-            avg_rating = banco_data['rating'].mean()
-            
-            # Factores de ROI simulados
-            base_roi = avg_rating * avg_reviews * 0.001  # Factor base
-            market_factor = len(banco_data) / len(df)  # Factor de mercado actual
-            
-            roi_projections.append({
-                'banco': banco,
-                'roi_proyectado': base_roi * (1 - market_factor) * 100,
-                'inversion_requerida': int(gaps.get(banco, 0)) * 50,  # 50k por sucursal estimado
-                'payback_months': max(12, 36 * market_factor)
-            })
-    
-    roi_df = pd.DataFrame(roi_projections)
-    
-    if not roi_df.empty:
-        fig_roi = px.scatter(
-            roi_df,
-            x='inversion_requerida',
-            y='roi_proyectado',
-            size='payback_months',
-            color='banco',
-            title="Proyección ROI vs Inversión Requerida",
-            color_discrete_map=analyzer.banco_colors
-        )
-        fig_roi.update_layout(
-            plot_bgcolor='rgba(0,0,0,0)',
-            paper_bgcolor='rgba(0,0,0,0)',
-            font_color='white',
-            title_font_color='#00d4ff'
-        )
-        st.plotly_chart(fig_roi, use_container_width=True)
     
     # Exportar reporte ejecutivo
     st.subheader("📤 Exportar Reporte Ejecutivo")
