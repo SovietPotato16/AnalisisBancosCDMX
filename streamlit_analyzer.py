@@ -1232,6 +1232,7 @@ def show_executive_report(df, reviews_df, competencia_df, analyzer):
             for alcaldia, score in low_satisfaction.items():
                 st.write(f"• {alcaldia}: {score:.2f}")
     
+
     
     # Exportar reporte ejecutivo
     st.subheader("📤 Exportar Reporte Ejecutivo")
